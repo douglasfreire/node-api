@@ -4,6 +4,7 @@ const requireDir = require('require-dir');
 
 //Iniciando o app
 const app = express();
+app.use(express.json());//retorna os arquivos criado em json
 
 //Iniciando o mongodb
 mongoose.connect("mongodb://localhost:27017/nodeapi", {useNewUrlParser: true});
