@@ -1,10 +1,12 @@
 const express = require('express');
+const cors = require('cors');
 const mongoose = require('mongoose');
 const requireDir = require('require-dir');
 
 //Iniciando o app
 const app = express();
 app.use(express.json());//retorna os arquivos criado em json
+app.use(cors()); // Para disponibilizar acesso publicamente
 
 //Iniciando o mongodb
 mongoose.connect("mongodb://localhost:27017/nodeapi", {useNewUrlParser: true});
